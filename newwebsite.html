@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Class & Interface</title>
+    <link rel="stylesheet" href="C:\Users\KIIT\Desktop\VScode\New folder\HTML\style.css"
+</head>
+<body>
+    <header>
+        <a name="#home"></a> 
+        <h1>Web Technology Project</h1>  
+    </header>
+    <nav>
+        <a href="#home">Home</a>        
+        <a href="#abstractclass">Abstract Class</a>        
+        <a href="#interface">Interface</a>        
+        <a href="#about">About</a>        
+        <a href="">Contact</a>        
+    </nav>
+    <main>
+        <aside>
+            
+        </aside>
+        <div>
+            <aside>
+                <h3>Java Script</h3><br>
+            <h4>S Tutorial<br>
+            JS HOME<br>
+            JS Introduction<br>
+            JS Where To<br>
+            JS Output<br>
+            JS Statements<br>
+            JS Syntax<br>
+            JS Comments<br>
+            JS HOME<br>
+            JS Introduction<br>
+            JS Where To<br>
+            JS Output<br>
+            JS Statements<br>
+            JS Syntax<br>
+            JS Comments<br>
+            JS HOME<br>
+            JS Introduction<br>
+            JS Where To<br>
+            JS Output<br>
+            JS Statements<br>
+            JS Syntax<br>
+            JS Comments<br>
+            <br></h4>
+            </aside>
+        </div>
+        
+        
+        <section>
+            <a name="abstractclass"></a>
+            <h2>ABSTRACT CLASSES </h2>
+            <h2>AND METHODS</h2>
+            <br>
+            <p>
+                Data <b>abstraction</b> is the process of hiding certain details and showing only essential information to the user.<br>
+Abstraction can be achieved with either <b>abstract classes</b> or <b><u>interfaces</u></b> (which you will learn more about in the next chapter).<br><br>
+
+The <span style="color: cornflowerblue;">abstract</span> keyword is a non-access modifier, used for classes and methods:<br>
+<ul>
+    <li><b>Abstract class:</b> is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).</li>
+    <li><b>Abstract method:</b> can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).</li><br></ul>
+An abstract class can have both abstract and regular methods:
+            </p>
+            
+            <div class="row">
+                <p><span style="color: grey;">
+                    <span style="color: cornflowerblue;">abstract class</span><span style="color: cornflowerblue;"></span> Animal {<br>
+                        &nbsp &nbsp  <span style="color: cornflowerblue;"> public abstract void </span><span style="color: red;">animalSound</span>();<br>
+                        &nbsp &nbsp  <span style="color: cornflowerblue;">public void</span>  <span style="color: red;">sleep</span>() {<br>
+                            &nbsp &nbsp &nbsp &nbsp  <span style="color: red;">System</span>.out.<span style="color: red;">println</span><span style="color: green;">("Zzz")</span>;<br>
+                            &nbsp &nbsp  }<br>
+                      } 
+                </span> 
+                </p>
+            </div>
+            <br>
+           <p>To access the abstract class, it must be inherited from another class. Let's convert the Animal class we used in the Polymorphism chapter to an abstract class:</p>
+           <div class="row">
+            <h3>Example</h3>
+            <p><span style="color: grey;">
+                // Abstract class<br>
+                abstract class Animal {<br>
+                &nbsp &nbsp // Abstract method (does not have a body)<br>
+                &nbsp &nbsp public abstract void animalSound();<br>
+                &nbsp &nbsp // Regular method<br>
+                &nbsp &nbsp public void sleep() {<br>
+                    &nbsp &nbsp &nbsp &nbsp System.out.println("Zzz");<br>
+                    &nbsp &nbsp }<br>
+                }<br>
+
+                // Subclass (inherit from Animal)<br>
+                class Pig extends Animal {<br>
+                    &nbsp &nbsp public void animalSound() {<br>
+                        &nbsp &nbsp &nbsp &nbsp // The body of animalSound() is provided here<br>
+                        &nbsp &nbsp &nbsp &nbsp System.out.println("The pig says: wee wee");<br>
+                        &nbsp &nbsp }<br>
+                }<br>
+
+                class Main {<br>
+                    &nbsp &nbsp public static void main(String[] args) {<br>
+                        &nbsp &nbsp &nbsp &nbsp Pig myPig = new Pig(); // Create a Pig object<br>
+                        &nbsp &nbsp &nbsp &nbsp myPig.animalSound();<br>
+                        &nbsp &nbsp myPig.sleep();<br>
+                        &nbsp &nbsp }<br>
+                } <br>
+            </span> 
+            </p>
+        <a href="" class="btn">Try it yourself</a>
+        </div>
+        </section>
+        <br><br>
+
+        <section>
+            <a name="interface"></a>
+            <h2>Interface</h2>
+            <p><h4>An interface is a completely <strong>"abstract class"</strong>that is used to group related methods with empty bodies:</h4></p>
+           
+            <div class="row">
+                <h3>Example</h3>
+                <p><span style="color: grey;">
+                    // interface<br>
+                    &nbsp &nbsp <span style="color: cornflowerblue;">interface</span> Animal {<br>
+                    &nbsp &nbsp <span style="color: cornflowerblue;">public void</span> animalSound(); &nbsp // interface method (does not have a body)<br>
+                    &nbsp &nbsp <span style="color: cornflowerblue;">public void</span> run(); &nbsp // interface method (does not have a body)<br>
+                    } 
+                </span> 
+                </p>
+            <a href="" class="btn">Try it yourself</a>
+            </div>
+
+
+            <br>
+            <p>
+                To access the interface methods, the interface must be "implemented" (kinda like inherited) by another class with the implements keyword (instead of extends). The body of the interface method is provided by the "implement" class:
+            </p>
+            <div class="row">
+                <h3>Example</h3>
+                <p><span style="color: grey;">
+                    // Interface<br>
+                    &nbsp &nbsp interface Animal {<br>
+                        &nbsp &nbsp public void animalSound(); // interface method (does not have a body)<br>
+                        &nbsp &nbsp public void sleep(); // interface method (does not have a body)<br>
+                    }<br>       
+
+                    // Pig "implements" the Animal interface<br>
+                    class Pig implements Animal {<br>
+                        &nbsp &nbsp public void animalSound() {<br>
+                            &nbsp &nbsp &nbps// The body of animalSound() is provided here<br>
+                            &nbsp &nbsp &nbpsSystem.out.println("The pig says: wee wee");<br>
+                            &nbsp &nbsp}<br>
+                            &nbsp &nbsp public void sleep() {<br>
+                                &nbsp &nbsp &nbps// The body of sleep() is provided here<br>
+                                &nbsp &nbsp &nbpsSystem.out.println("Zzz");<br>
+                                &nbsp &nbsp }<br>
+                        }<br>
+
+                    class Main {<br>                
+                        &nbsp &nbsp &nbpspublic static void main(String[] args) {<br>
+                            &nbsp &nbsp &nbpsPig myPig = new Pig();  // Create a Pig object<br>
+                            &nbsp &nbsp &nbpsmyPig.animalSound();<br>
+                            &nbsp &nbsp &nbpsmyPig.sleep();<br>
+                            &nbsp &nbsp}<br>
+                    } <br>
+                </span> 
+                </p>
+                <a href="" class="btn">Try it yourself</a>
+            </div>
+            <br>
+            <h3>Multiple Interfaces</h3>
+            <p>To implement multiple interfaces, separate them with a comma:</p>
+            <div class="row">
+                <h3>Example</h3>
+                <p><span style="color: grey;">
+                    interface FirstInterface {<br>
+                        &nbsp &nbsp        public void myMethod(); &nbsp &nbsp // interface method<br>
+                        &nbsp &nbsp  }<br>
+                      
+                    interface SecondInterface {<br>
+                            &nbsp &nbsp   public void myOtherMethod(); &nbsp &nbsp // interface method<br>
+                            &nbsp &nbsp }<br>
+                      
+                      class DemoClass implements FirstInterface, SecondInterface {<br>
+                        &nbsp &nbsp   public void myMethod() {<br>
+                            &nbsp &nbsp    System.out.println("Some text..");<br>
+                            &nbsp &nbsp  }<br>
+                            &nbsp &nbsp   public void myOtherMethod() {<br>
+                                &nbsp &nbsp      System.out.println("Some other text...");<br>
+                                &nbsp &nbsp   }<br>
+                      }<br>
+                      
+                      class Main {<br>
+                        &nbsp &nbsp   public static void main(String[] args) {<br>
+                            &nbsp &nbsp     DemoClass myObj = new DemoClass();<br>
+                            &nbsp &nbsp     myObj.myMethod();<br>
+                            &nbsp &nbsp    myObj.myOtherMethod();<br>
+                            &nbsp &nbsp   }<br>
+                      } <br>
+                </span> 
+                </p>
+                <a href="" class="btn">Try it yourself</a>
+            </div>
+        </section>
+        <br><br>
+
+        <section>
+            <h2>About</h2>
+            <a name="about"></a> 
+            <p>Web Technology is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we
+                <br> cannot warrant full correctness of all content. While using Web Technology, you agree to have read and accepted our terms of use, cookie and privacy policy.<br>
+
+                Copyright 1999-2021 by Refsnes Data. All Rights Reserved.<br>
+                Web Technology is Powered by WT.CSS.</p>
+        </section>
+
+        <footer>
+            <a href="">FAQ</a>
+            <a href="">Contact us</a>
+            <a href="">Terms of use</a>
+            <a href="">Privacy Policy</a>
+        </footer>
+    </main>
+    
+</body>
+</html>
