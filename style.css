@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;    
+    list-style: none;
+}
+
+header{
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(52, 151, 49);
+    color: whitesmoke;
+    background-image: url(C:\Users\KIIT\Desktop\VScode\HTML\wt.jpg);
+}
+
+header h1{
+    font-size: 40px; 
+}
+
+nav{
+    background-color: rgb(169, 175, 187);
+    overflow: hidden;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    float: left;
+    text-align: right;
+    
+}
+
+section{
+    text-align: center;
+    padding-top: 40px;
+    height: 100%;
+    max-width: 1500px;
+}
+
+section:nth-child(1){
+    
+
+}
+
+section div{
+    text-align: left;
+    width: 58%;
+    padding: 5px;
+    border: 2px solid rgb(190, 186, 186);
+    margin: 0;
+    margin-left: 21%;
+    margin-right: 21%;
+}
+
+aside {
+    width: 20%;
+    height: 3500px;
+    padding: 15px;
+    /* margin-left: 15px; */
+    float: right;
+    font-style: italic;
+    background-color:rgb(230, 224, 224) ;
+  }
+
+div aside {
+    width: 20%;
+    height: 3500px;
+    padding: 15px;
+    /* margin-left: 15px; */
+    float: left;
+    font-style:normal ;
+    background-color:rgb(230, 224, 224);
+    cursor: pointer;
+  }
+
+  .btn{
+    display: inline-block;
+    text-decoration: none;
+    color:rgb(84, 196, 61) ;
+    border: 2px solid rgb(84, 196, 61);
+    padding: 5px 10px;
+    font-size: 15px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+footer{
+    overflow: hidden;
+    background-color: rgb(80, 78, 78);
+}
+
+footer a{
+    padding: 50px;
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+}
